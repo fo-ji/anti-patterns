@@ -1,0 +1,20 @@
+{
+  "name": "anti-patterns",
+  "version": "1.0.0",
+  "author": "fo-ji",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "server": "yarn workspace server",
+    "client": "yarn workspace client"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "prisma": "^5.0.0",
+    "typescript": "^5.1.6"
+  }
+}
