@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+/client/node_modules
+/server/node_modules
+
+# testing
+/client/coverage
+/server/coverage
+
+# next.js
+/client/.next/
+
+# production
+/client/build
+/server/dist
