@@ -14,6 +14,8 @@ module.exports = {
         dark: '#0F172A',
         base: '#334155',
         light: '#CBD5E1',
+        white: '#FFFFFF',
+        link: '#2563EB',
         warning: '#FF2020',
       },
     },
