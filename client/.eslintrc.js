@@ -10,8 +10,20 @@ module.exports = {
     'plugin:storybook/recommended',
     'next/core-web-vitals',
     'plugin:react/jsx-runtime',
+    'plugin:tailwindcss/recommended',
     'prettier',
   ],
+  settings: {
+    tailwindcss: {
+      groupByResponsive: true,
+      whitelist: [
+        'primary\\',
+        'secondary\\',
+        'neutral\\',
+        'font\\-(dark|base|light|warning)',
+      ],
+    },
+  },
   rules: {
     'no-restricted-imports': [
       'error',

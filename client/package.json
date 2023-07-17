@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-storybook": "^0.6.12"
+    "eslint-plugin-storybook": "^0.6.12",
+    "eslint-plugin-tailwindcss": "^3.13.0"
   }
 }
