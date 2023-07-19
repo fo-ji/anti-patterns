@@ -10,8 +10,7 @@ export type ButtonProps = {
   children: ReactNode;
   type?: 'button' | 'submit' | 'reset';
   variant?: keyof typeof variants;
-  isLoading?: boolean;
-  isDisabled?: boolean;
+  disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   icon?: JSX.Element;
 };
@@ -26,7 +25,11 @@ export const Button = ({
   return (
     <button
       {...props}
-      className={`inline-flex items-center gap-2 rounded px-4 py-2 ${variants[variant]}`}
+      className={`
+        inline-flex items-center gap-2 rounded px-4 py-2
+        disabled:cursor-not-allowed disabled:opacity-50
+        ${variants[variant]}
+      `}
       type={type}
     >
       {icon && <span className="h-6 w-6">{icon}</span>}

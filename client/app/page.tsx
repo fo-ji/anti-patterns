@@ -10,7 +10,9 @@ export default function Home() {
       <Button variant="outline" icon={<BeakerIcon />}>
         編集する
       </Button>
-      <Link href="/">ページ遷移(リンク)</Link>
+      <Link href="/" icon={<BeakerIcon />}>
+        ページ遷移(リンク)
+      </Link>
       <Link href="/" variant="solid">
         ページ遷移(ボタン)
       </Link>
