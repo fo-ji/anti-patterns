@@ -26,7 +26,10 @@ export const Link = ({
   return (
     <NextLink shallow={shallow} href={href} passHref>
       <button
-        className={`inline-flex items-center gap-2 rounded px-4 py-2 ${variants[variant]}`}
+        className={`
+          inline-flex items-center gap-2 rounded px-4 py-2
+          ${variants[variant]}
+        `}
       >
         {icon && <span className="h-6 w-6">{icon}</span>}
         {children}
