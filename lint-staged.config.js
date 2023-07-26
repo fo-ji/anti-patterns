@@ -1,10 +1,12 @@
 module.exports = {
-  '*.{ts,tsx}': [
+  'client/**/*.{ts,tsx}': [
     'yarn client lint',
-    'yarn server lint',
     "bash -c 'yarn client types:check'",
-    "bash -c 'yarn server types:check'",
     'yarn client format:check',
+  ],
+  'server/**/*.ts': [
+    'yarn server lint',
+    "bash -c 'yarn server types:check'",
     'yarn server format:check',
   ],
 };
