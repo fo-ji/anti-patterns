@@ -4,7 +4,7 @@ import type { Meta, StoryFn } from '@storybook/react';
 import { Link, type LinkProps } from './link';
 
 const meta: Meta = {
-  title: 'Components/Link',
+  title: 'Components/Link/Link',
   component: Link,
 };
 
