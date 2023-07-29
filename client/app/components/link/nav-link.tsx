@@ -13,7 +13,7 @@ export const NavLink = ({ children, href, isActive = false }: NavLinkProps) => {
       href={href}
       className={
         isActive
-          ? 'underline decoration-primary font-semibold underline-offset-4 decoration-2'
+          ? 'font-semibold underline decoration-primary decoration-2 underline-offset-4'
           : 'hover:opacity-90'
       }
     >
