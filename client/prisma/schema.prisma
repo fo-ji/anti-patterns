@@ -1,0 +1,109 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id         String       @id
+  title      String
+  content    String
+  categoryId String
+  userId     String
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime
+  Category   Category     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  User       User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ArticleTag ArticleTag[]
+  Comment    Comment[]
+  Favorite   Favorite[]
+}
+
+model ArticleTag {
+  id        String   @id
+  tagId     String
+  articleId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  Tag       Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+}
+
+model Category {
+  id           String         @id
+  name         String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime
+  Article      Article[]
+  DraftArticle DraftArticle[]
+}
+
+model Comment {
+  id        String   @id
+  content   String
+  aritcleId String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Article   Article  @relation(fields: [aritcleId], references: [id], onDelete: Cascade)
+  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model DraftArticle {
+  id               String             @id
+  title            String
+  content          String
+  categoryId       String
+  userId           String
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime
+  Category         Category           @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  User             User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  DraftArticleTags DraftArticleTags[]
+}
+
+model DraftArticleTags {
+  id             String       @id
+  tagId          String
+  draftArticleId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime
+  DraftArticle   DraftArticle @relation(fields: [draftArticleId], references: [id], onDelete: Cascade)
+  Tag            Tag          @relation(fields: [tagId], references: [id], onDelete: Cascade)
+}
+
+model Favorite {
+  id        String   @id
+  aritcleId String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  Article   Article  @relation(fields: [aritcleId], references: [id], onDelete: Cascade)
+  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Tag {
+  id               String             @id
+  name             String
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime
+  ArticleTag       ArticleTag[]
+  DraftArticleTags DraftArticleTags[]
+}
+
+model User {
+  id           String         @id
+  email        String         @unique
+  name         String
+  avatar       String
+  password     String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime
+  Article      Article[]
+  Comment      Comment[]
+  DraftArticle DraftArticle[]
+  Favorite     Favorite[]
+}
