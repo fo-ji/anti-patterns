@@ -3,7 +3,7 @@ import type { Meta, StoryFn } from '@storybook/react';
 import { NotFound } from './not-found';
 
 const meta: Meta = {
-  title: 'Component/NotFound',
+  title: 'Components/NotFound',
   component: NotFound,
 };
 
