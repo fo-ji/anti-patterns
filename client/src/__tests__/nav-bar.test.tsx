@@ -1,6 +1,5 @@
 import { NavBar } from '@/components/nav-bar';
-
-import { render, screen } from '../testing/test-utils';
+import { render, screen } from '@/testing/test-utils';
 
 const mockUsePathname = jest.fn();
 
