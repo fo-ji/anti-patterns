@@ -8,15 +8,15 @@ export const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="mt-4">
+    <nav aria-label="ナビゲーション" className="mt-4 border-b border-b-neutral">
       <ul className="flex gap-6">
         <li>
-          <NavLink href="/" isActive={pathname === '/'}>
-            トレンド
+          <NavLink href="/" isCurrent={pathname === '/'}>
+            ホーム
           </NavLink>
         </li>
         <li>
-          <NavLink href="/ranking" isActive={pathname === '/ranking'}>
+          <NavLink href="/ranking" isCurrent={pathname === '/ranking'}>
             ランキング
           </NavLink>
         </li>
