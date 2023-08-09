@@ -1,8 +1,12 @@
 import NextLink from 'next/link';
 
 import { Card, CardContent, CardHeader } from '@/components/card';
+import { apiClient } from '@/lib/api-client';
 
-export default function Home() {
+export default async function Home() {
+  const result = await apiClient.get('/');
+  console.log({ result });
+
   return (
     <section className="w-3/4 flex-1 py-6">
       <ul className="flex flex-col gap-4 px-4">
