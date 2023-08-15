@@ -5,5 +5,5 @@ export type CardContentProps = {
 };
 
 export const CardContent = ({ children }: CardContentProps) => {
-  return <div className="py-4">{children}</div>;
+  return <div className="truncate py-4">{children}</div>;
 };
