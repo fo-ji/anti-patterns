@@ -6,7 +6,22 @@ import type { Article } from '@prisma/client';
 export class ArticlesService {
   constructor(private readonly prismaService: PrismaService) {}
 
-  getArticles(): Promise<Article[]> {
-    return this.prismaService.article.findMany();
+  async getArticles(): Promise<Article[]> {
+    return await this.prismaService.article.findMany();
+  }
+
+  async getArticle(articleId: string): Promise<Article | null> {
+    return await this.prismaService.article.findUnique({
+      where: {
+        id: articleId,
+      },
+      include: {
+        user: true,
+        category: true,
+        comments: true,
+        favorites: true,
+        articleTags: true,
+      },
+    });
   }
 }

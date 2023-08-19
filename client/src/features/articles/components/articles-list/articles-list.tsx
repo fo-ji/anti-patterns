@@ -12,14 +12,11 @@ export type ArticlesListProps = {
 export const ArticlesList = ({ articles }: ArticlesListProps) => {
   if (!articles.length) return <NoData />;
   return (
-    <ul className="flex flex-col gap-4 px-4">
+    <ul className="flex flex-col gap-4">
       {articles.map((article) => (
         <li key={article.id}>
-          <NextLink
-            href={`/articles/${article.id}`}
-            className="block hover:bg-neutral"
-          >
-            <Card variant="outline">
+          <NextLink href={`/articles/${article.id}`}>
+            <Card>
               <CardHeader
                 title={article.title}
                 supplement={format(new Date(article.updatedAt), 'yyyy/MM/dd')}

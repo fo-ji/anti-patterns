@@ -8,7 +8,7 @@ export const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav aria-label="ナビゲーション" className="mt-4 border-b border-b-neutral">
+    <nav aria-label="ナビゲーション" className="mt-4">
       <ul className="flex gap-6">
         <li>
           <NavLink href="/" isCurrent={pathname === '/'}>

@@ -15,7 +15,7 @@ export default function PublicWithNavigationLayout({
       <Header />
       <main className="min-h-[calc(100vh_-_128px)] px-8">
         <NavBar />
-        <section className="flex min-h-[calc(100vh_-_156px)]">
+        <section className="flex min-h-[calc(100vh_-_156px)] gap-4 py-4">
           <SideBar />
           {children}
         </section>

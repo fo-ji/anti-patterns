@@ -7,15 +7,8 @@ export const testData = {
         '日本国（にほんこく、にっぽんこく、英: Japan）、または日本（にほん、にっぽん）は、東アジアに位置する民主制国家[1]。首都は東京都[注釈 2][2][3]。\n全長3500キロメートル以上にわたる国土は、主に日本列島[注釈 6]および南西諸島・伊豆諸島・小笠原諸島などの弧状列島により構成される[3][4]。大部分が温帯に属するが、北部や島嶼部では亜寒帯や熱帯の地域がある[5][6]。地形は起伏に富み、火山地・丘陵を含む山地の面積は国土の約75%を占め[6]、人口は沿岸の平野部に集中している。国内には行政区分として47の都道府県があり、日本人（大和民族・琉球民族・アイヌ民族[注釈 7]・外国系諸民族）と外国人が居住し、日本語を通用する[2][3]。',
       categoryId: '9ba5d2e4-a54e-91f8-a7b8-ec4f6e6dcd24',
       userId: '12057ecf-a745-5b73-ba41-c14b2b75462f',
-      // createdAt: 1648219728378,
-      // updatedAt: 1648219728378,
       createdAt: new Date('2023-08-03'),
       updatedAt: new Date('2023-08-03'),
-      // category: {},
-      // user: {},
-      // articleTags: [],
-      // comments: [],
-      // favorites: [],
     },
   ],
   articleTags: [
@@ -140,6 +133,61 @@ export const testData = {
       // comments: [],
       // draftArticles: [],
       // favorites: [],
+    },
+  ],
+  articleWithRelations: [
+    {
+      id: '41028142-5e87-b22a-f1ba-44c34f0e9e95',
+      title: '日本について',
+      content:
+        '日本国（にほんこく、にっぽんこく、英: Japan）、または日本（にほん、にっぽん）は、東アジアに位置する民主制国家[1]。首都は東京都[注釈 2][2][3]。\n全長3500キロメートル以上にわたる国土は、主に日本列島[注釈 6]および南西諸島・伊豆諸島・小笠原諸島などの弧状列島により構成される[3][4]。大部分が温帯に属するが、北部や島嶼部では亜寒帯や熱帯の地域がある[5][6]。地形は起伏に富み、火山地・丘陵を含む山地の面積は国土の約75%を占め[6]、人口は沿岸の平野部に集中している。国内には行政区分として47の都道府県があり、日本人（大和民族・琉球民族・アイヌ民族[注釈 7]・外国系諸民族）と外国人が居住し、日本語を通用する[2][3]。',
+      categoryId: '9ba5d2e4-a54e-91f8-a7b8-ec4f6e6dcd24',
+      userId: '12057ecf-a745-5b73-ba41-c14b2b75462f',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
+      category: {
+        id: '9ba5d2e4-a54e-91f8-a7b8-ec4f6e6dcd24',
+        name: '暮らし',
+        createdAt: new Date('2023-08-03'),
+        updatedAt: new Date('2023-08-03'),
+      },
+      user: {
+        id: '12057ecf-a745-5b73-ba41-c14b2b75462f',
+        email: 'user1@example.com',
+        name: 'test-user-1',
+        avatar: '',
+        password: 'password',
+        createdAt: new Date('2023-08-03'),
+        updatedAt: new Date('2023-08-03'),
+      },
+      articleTags: [
+        {
+          id: 'ade59d69-8d57-ff4c-3966-2df386f559c2',
+          tagId: 'b559be86-2f2b-7242-78b1-d20c3e61b15f',
+          articleId: '41028142-5e87-b22a-f1ba-44c34f0e9e95',
+          createdAt: new Date('2023-08-03'),
+          updatedAt: new Date('2023-08-03'),
+        },
+      ],
+      comments: [
+        {
+          id: '9a4576c6-f632-726f-fde2-c5a7efc74d44',
+          content: 'とても良い記事ですね！',
+          articleId: '41028142-5e87-b22a-f1ba-44c34f0e9e95',
+          userId: 'b8d323e6-7f89-7616-5390-267493695bd1',
+          createdAt: new Date('2023-08-03'),
+          updatedAt: new Date('2023-08-03'),
+        },
+      ],
+      favorites: [
+        {
+          id: 'e1f3b699-b852-1860-07b4-45b2d6030b50',
+          articleId: '41028142-5e87-b22a-f1ba-44c34f0e9e95',
+          userId: 'b8d323e6-7f89-7616-5390-267493695bd1',
+          createdAt: new Date('2023-08-03'),
+          updatedAt: new Date('2023-08-03'),
+        },
+      ],
     },
   ],
 };
