@@ -15,6 +15,7 @@ describe('ArticlesService', () => {
           useValue: {
             article: {
               findMany: async () => testData.articles,
+              findUnique: async () => testData.articles[0],
             },
           },
         },
@@ -24,7 +25,17 @@ describe('ArticlesService', () => {
     articlesService = module.get<ArticlesService>(ArticlesService);
   });
 
-  it('should return an array of articles', async () => {
-    expect(await articlesService.getArticles()).toEqual(testData.articles);
+  describe('getArticles', () => {
+    it('should return an array of articles', async () => {
+      expect(await articlesService.getArticles()).toEqual(testData.articles);
+    });
+  });
+
+  describe('getArticle', () => {
+    it('should return an article', async () => {
+      expect(await articlesService.getArticle(testData.articles[0].id)).toEqual(
+        testData.articles[0],
+      );
+    });
   });
 });

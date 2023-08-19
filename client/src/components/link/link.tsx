@@ -2,8 +2,8 @@ import NextLink from 'next/link';
 import type { ReactNode } from 'react';
 
 const variants = {
-  link: 'text-font-link hover:opacity-90 hover:underline',
-  solid: 'bg-primary hover:opacity-90 text-font-white',
+  link: 'text-font-link hover:opacity-70 hover:underline',
+  solid: 'bg-primary hover:opacity-70 text-font-white',
   outline:
     'bg-transparent hover:bg-primary text-primary hover:text-font-white border border-primary hover:border-transparent',
 };

@@ -1,9 +1,11 @@
 import type { MouseEventHandler, ReactNode } from 'react';
 
 const variants = {
-  solid: 'bg-primary hover:opacity-90 text-font-white',
+  solid: 'bg-primary hover:opacity-70 text-font-white',
   outline:
     'bg-transparent hover:bg-primary text-primary hover:text-font-white border border-primary hover:border-transparent',
+  circle:
+    'bg-transparent hover:bg-secondary text-secondary hover:text-font-white rounded-full border border-secondary',
 };
 
 export type ButtonProps = {

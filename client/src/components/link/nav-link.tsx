@@ -19,7 +19,7 @@ export const NavLink = ({
       className={
         isCurrent
           ? 'font-semibold underline decoration-primary decoration-2 underline-offset-4'
-          : 'hover:opacity-90'
+          : 'hover:underline hover:opacity-70'
       }
     >
       {children}

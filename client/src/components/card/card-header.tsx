@@ -19,7 +19,7 @@ export const CardHeader = ({
         </h3>
       )}
       {supplement && (
-        <div className="text-right text-sm text-font-light">
+        <div className="text-right text-sm">
           <span>{supplement}</span>
         </div>
       )}
