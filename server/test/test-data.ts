@@ -64,10 +64,14 @@ export const testData = {
     {
       id: 'b559be86-2f2b-7242-78b1-d20c3e61b15f',
       name: 'Japan',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
     },
     {
       id: 'ffe386d6-2f9b-8f25-224a-278e7068a86c',
       name: 'America',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
     },
   ],
   users: [

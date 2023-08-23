@@ -1,5 +1,7 @@
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 
+const path = require('path');
+
 const config = {
   stories: ['../src/components/**/*.stories.tsx'],
   addons: [
@@ -24,6 +26,26 @@ const config = {
     autodocs: 'tag',
   },
   staticDirs: ['../public'],
+  webpackFinal: async (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@/components': path.resolve(__dirname, '../src/components'),
+      '@/features': path.resolve(__dirname, '../src/features'),
+      '@/lib': path.resolve(__dirname, '../src/lib'),
+      '@/config': path.resolve(__dirname, '../src/config'),
+    };
+
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          'next-i18next': 'react-i18next',
+        },
+      },
+    };
+  },
 };
 
 export default config;
