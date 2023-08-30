@@ -1,4 +1,5 @@
 import { CategoriesList } from '@/features/categories';
+import { testData } from '@/testing/test-data';
 import { render, screen } from '@/testing/test-utils';
 
 const mockUsePathname = jest.fn();
@@ -10,15 +11,13 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('Categories List', () => {
-  test.each([
-    { url: '/categories/lifestyle', name: '暮らし' },
-    { url: '/categories/work', name: '仕事' },
-    { url: '/categories/learn', name: '学び' },
-    { url: '/categories/love', name: '恋愛' },
-    { url: '/categories/tech', name: 'テクノロジー' },
-  ])('$url では $name がカレントになっている', ({ url, name }) => {
+  const urls = testData.categories.map((category) => ({
+    url: `/categories/${category.id}`,
+    name: category.name,
+  }));
+  test.each(urls)('$url では $name がカレントになっている', ({ url, name }) => {
     mockUsePathname.mockImplementation(() => url);
-    render(<CategoriesList />);
+    render(<CategoriesList categories={testData.categories} />);
     const link = screen.getByRole('link', { name });
     expect(link).toHaveAttribute('aria-current', 'page');
   });

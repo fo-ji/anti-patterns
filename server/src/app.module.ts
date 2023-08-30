@@ -6,6 +6,7 @@ import { PrismaModule } from '@/lib/prisma';
 import { ArticlesModule } from '@/features/articles';
 import { TagsModule } from '@/features/tags';
 import { ArticleTagsModule } from '@/features/article-tags';
+import { CategoriesModule } from '@/features/categories';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ArticleTagsModule } from '@/features/article-tags';
     ArticlesModule,
     TagsModule,
     ArticleTagsModule,
+    CategoriesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
