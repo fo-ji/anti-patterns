@@ -40,10 +40,32 @@ export const testData = {
     {
       id: '9ba5d2e4-a54e-91f8-a7b8-ec4f6e6dcd24',
       name: '暮らし',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
     },
     {
       id: '6f80405a-552d-9bd0-0251-a4f7acbb893a',
       name: '仕事',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
+    },
+    {
+      id: '2acc8164-933b-3475-c5b7-b2f713992070',
+      name: '学び',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
+    },
+    {
+      id: '6d8011d2-3356-075d-0325-14597d6d4d5c',
+      name: '恋愛',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
+    },
+    {
+      id: 'af3a81e0-3c36-f5aa-8a5c-1ca815ebda96',
+      name: 'テクノロジー',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
     },
   ],
   comments: [
@@ -69,6 +91,8 @@ export const testData = {
       id: '88777fbc-bb18-a1ce-3e68-dede8566df08',
       tagId: 'ffe386d6-2f9b-8f25-224a-278e7068a86c',
       draftArticleId: '2e5e0339-e4ca-468b-21fc-79cdf8e72a77',
+      createdAt: new Date('2023-08-03'),
+      updatedAt: new Date('2023-08-03'),
     },
   ],
   favorites: [

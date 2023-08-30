@@ -2,12 +2,12 @@ import { NoData } from '@/components/no-data';
 
 import type { Tag } from '@prisma/client';
 
-export type TagInfo = {
+export type TagInfoProps = {
   tag: Tag | null;
   relatedArticleSize: number;
 };
 
-export const TagInfo = ({ tag, relatedArticleSize }: TagInfo) => {
+export const TagInfo = ({ tag, relatedArticleSize }: TagInfoProps) => {
   if (!tag) return <NoData />;
   return (
     <div className="rounded-md border-neutral bg-plain p-4">
