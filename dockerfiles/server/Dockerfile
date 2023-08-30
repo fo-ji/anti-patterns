@@ -3,7 +3,7 @@ FROM node:18.17.1-slim
 WORKDIR /app/server
 
 RUN apt-get update && \
-    apt-get -y install procps
+    apt-get -y install procps openssl
 
 RUN yarn global add @nestjs/cli
 
