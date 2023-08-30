@@ -1,6 +1,6 @@
-import type { Meta, StoryFn } from '@storybook/react';
-
 import { Tag, type TagProps } from './tag';
+
+import type { Meta, StoryFn } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Components/Tag',

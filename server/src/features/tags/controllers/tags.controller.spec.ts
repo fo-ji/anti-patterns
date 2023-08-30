@@ -40,5 +40,17 @@ describe('TagsController', () => {
         ]);
       });
     });
+
+    describe('getTag', () => {
+      it('should return an tag', async () => {
+        jest
+          .spyOn(tagsService, 'getTag')
+          .mockImplementation(async () => testData.tags[0]);
+
+        expect(await tagsController.getTag(testData.tags[0].id)).toBe(
+          testData.tags[0],
+        );
+      });
+    });
   });
 });

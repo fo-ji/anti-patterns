@@ -43,7 +43,31 @@ module.exports = {
           'sibling',
           'index',
           'object',
+          'type',
         ],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'builtin',
+            position: 'before',
+          },
+          {
+            pattern: 'next',
+            group: 'builtin',
+            position: 'before',
+          },
+          {
+            pattern: 'next/**',
+            group: 'builtin',
+            position: 'before',
+          },
+          {
+            pattern: '@/**',
+            group: 'parent',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react', 'next', 'next/**'],
         'newlines-between': 'always',
         alphabetize: {
           order: 'asc',

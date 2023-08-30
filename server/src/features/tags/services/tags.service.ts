@@ -12,4 +12,12 @@ export class TagsService {
       orderBy: [{ updatedAt: 'desc' }],
     });
   }
+
+  async getTag(tagId: string): Promise<Tag | null> {
+    return await this.prismaService.tag.findUnique({
+      where: {
+        id: tagId,
+      },
+    });
+  }
 }

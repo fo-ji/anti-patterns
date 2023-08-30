@@ -1,7 +1,7 @@
 // Not Working
-import type { Meta, StoryFn } from '@storybook/react';
-
 import { SideBar } from './side-bar';
+
+import type { Meta, StoryFn } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Components/SideBar',

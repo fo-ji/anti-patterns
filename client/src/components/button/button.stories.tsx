@@ -1,7 +1,8 @@
 import { PlusIcon } from '@heroicons/react/24/solid';
-import type { Meta, StoryFn } from '@storybook/react';
 
 import { Button, type ButtonProps } from './button';
+
+import type { Meta, StoryFn } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Components/Button',
