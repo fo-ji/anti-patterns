@@ -1,6 +1,6 @@
-import type { Meta, StoryFn } from '@storybook/react';
-
 import { NoData } from './no-data';
+
+import type { Meta, StoryFn } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Components/NoData',

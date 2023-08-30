@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from '@/lib/prisma';
 import { ArticlesModule } from '@/features/articles';
 import { TagsModule } from '@/features/tags';
+import { ArticleTagsModule } from '@/features/article-tags';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { TagsModule } from '@/features/tags';
     PrismaModule,
     ArticlesModule,
     TagsModule,
+    ArticleTagsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,6 +1,8 @@
-import { HashtagIcon } from '@heroicons/react/24/solid';
-import NextLink from 'next/link';
 import type { ReactNode } from 'react';
+
+import NextLink from 'next/link';
+
+import { HashtagIcon } from '@heroicons/react/24/solid';
 
 export type TagProps = {
   href: string;

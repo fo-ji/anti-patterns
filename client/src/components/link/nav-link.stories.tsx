@@ -1,6 +1,6 @@
-import type { Meta, StoryFn } from '@storybook/react';
-
 import { NavLink, type NavLinkProps } from './nav-link';
+
+import type { Meta, StoryFn } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Components/Link/NavLink',

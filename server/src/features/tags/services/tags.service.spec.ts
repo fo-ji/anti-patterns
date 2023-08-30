@@ -34,4 +34,14 @@ describe('TagsService', () => {
       expect(tagsService.getTags(1)).resolves.toStrictEqual([testData.tags[0]]);
     });
   });
+
+  describe('getTag', () => {
+    it('should return an tag', async () => {
+      prismaService.tag.findUnique.mockResolvedValueOnce(testData.tags[0]);
+
+      expect(await tagsService.getTag(testData.tags[0].id)).toEqual(
+        testData.tags[0],
+      );
+    });
+  });
 });

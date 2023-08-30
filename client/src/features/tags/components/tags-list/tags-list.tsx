@@ -1,6 +1,6 @@
-import type { Tag } from '@prisma/client';
-
 import { Tag as UITag } from '@/components/tag';
+
+import type { Tag } from '@prisma/client';
 
 type TagsListProps = {
   tags: Tag[];

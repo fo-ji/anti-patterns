@@ -1,5 +1,6 @@
-import NextLink from 'next/link';
 import type { ReactNode } from 'react';
+
+import NextLink from 'next/link';
 
 const variants = {
   link: 'text-font-link hover:opacity-70 hover:underline',

@@ -1,6 +1,6 @@
-import type { Meta, StoryFn } from '@storybook/react';
-
 import { Card, type CardProps } from './card';
+
+import type { Meta, StoryFn } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Components/Card/Card',
