@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ArticlesService } from '../services';
 import type { Article } from '@prisma/client';
 
@@ -7,8 +7,8 @@ export class ArticlesController {
   constructor(private readonly articlesService: ArticlesService) {}
 
   @Get()
-  getArticles(): Promise<Article[]> {
-    return this.articlesService.getArticles();
+  getArticles(@Query('categoryId') categoryId?: string): Promise<Article[]> {
+    return this.articlesService.getArticles(categoryId);
   }
 
   @Get(':id')

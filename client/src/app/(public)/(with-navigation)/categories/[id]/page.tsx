@@ -1,3 +1,4 @@
+import { ArticlesList, getArticles } from '@/features/articles';
 import { CategoryInfo, getCategory } from '@/features/categories';
 
 type PublickCategoryPageProps = {
@@ -8,6 +9,7 @@ export default async function PublicCategoryPage({
   params,
 }: PublickCategoryPageProps) {
   const category = await getCategory(params.id);
+  const articles = await getArticles(params.id);
 
   return (
     <section className="flex w-3/4 flex-col gap-4">
@@ -15,8 +17,7 @@ export default async function PublicCategoryPage({
         <CategoryInfo category={category} />
       </section>
       <section>
-        {/* <ArticlesList articles={articles} /> */}
-        TODO: 記事一覧
+        <ArticlesList articles={articles} />
       </section>
     </section>
   );
