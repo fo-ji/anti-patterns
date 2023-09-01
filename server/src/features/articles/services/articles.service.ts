@@ -6,8 +6,13 @@ import type { Article } from '@prisma/client';
 export class ArticlesService {
   constructor(private readonly prismaService: PrismaService) {}
 
-  async getArticles(): Promise<Article[]> {
-    return await this.prismaService.article.findMany();
+  async getArticles(categoryId?: string): Promise<Article[]> {
+    return await this.prismaService.article.findMany({
+      where: {
+        categoryId,
+      },
+      orderBy: [{ updatedAt: 'desc' }],
+    });
   }
 
   async getArticle(articleId: string): Promise<Article | null> {
