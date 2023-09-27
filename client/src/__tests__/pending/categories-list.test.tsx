@@ -1,6 +1,6 @@
 import { CategoriesList } from '@/features/categories';
 import { testData } from '@/testing/test-data';
-import { render, screen } from '@/testing/test-utils';
+import { appRender, screen } from '@/testing/test-utils';
 
 const mockUsePathname = jest.fn();
 
@@ -17,7 +17,7 @@ describe('Categories List', () => {
   }));
   test.each(urls)('$url では $name がカレントになっている', ({ url, name }) => {
     mockUsePathname.mockImplementation(() => url);
-    render(<CategoriesList categories={testData.categories} />);
+    appRender(<CategoriesList categories={testData.categories} />);
     const link = screen.getByRole('link', { name });
     expect(link).toHaveAttribute('aria-current', 'page');
   });

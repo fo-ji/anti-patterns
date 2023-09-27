@@ -1,10 +1,10 @@
 import { ArticlesList } from '@/features/articles';
 import { testData } from '@/testing/test-data';
-import { render, screen, within } from '@/testing/test-utils';
+import { appRender, screen, within } from '@/testing/test-utils';
 
 describe('Articles List', () => {
   it('should render the articles list', async () => {
-    render(<ArticlesList articles={testData.articles} />);
+    appRender(<ArticlesList articles={testData.articles} />);
 
     const list = screen.queryByRole('list');
 
@@ -15,7 +15,7 @@ describe('Articles List', () => {
   });
 
   it('should render the no data message if the data does not exist', async () => {
-    render(<ArticlesList articles={[]} />);
+    appRender(<ArticlesList articles={[]} />);
 
     const noDataMessage = screen.getByRole('heading', {
       name: /表示するデータがありません/i,

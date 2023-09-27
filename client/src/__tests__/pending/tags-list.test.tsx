@@ -1,10 +1,10 @@
 import { TagsList } from '@/features/tags';
 import { testData } from '@/testing/test-data';
-import { render, screen, within } from '@/testing/test-utils';
+import { appRender, screen, within } from '@/testing/test-utils';
 
 describe('Tags List', () => {
   it('should render the tags list', async () => {
-    render(<TagsList tags={testData.tags} />);
+    appRender(<TagsList tags={testData.tags} />);
 
     const list = screen.queryByRole('list');
 
