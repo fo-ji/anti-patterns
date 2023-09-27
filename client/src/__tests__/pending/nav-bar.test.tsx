@@ -1,5 +1,5 @@
 import { NavBar } from '@/components/nav-bar';
-import { render, screen } from '@/testing/test-utils';
+import { appRender, screen } from '@/testing/test-utils';
 
 const mockUsePathname = jest.fn();
 
@@ -15,7 +15,7 @@ describe('@/components/nav-bar/nav-bar.tsx', () => {
     { url: '/ranking', name: 'ランキング' },
   ])('$url では $name がカレントになっている', ({ url, name }) => {
     mockUsePathname.mockImplementation(() => url);
-    render(<NavBar />);
+    appRender(<NavBar />);
     const link = screen.getByRole('link', { name });
     expect(link).toHaveAttribute('aria-current', 'page');
   });
