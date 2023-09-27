@@ -7,6 +7,7 @@ import { ArticlesModule } from '@/features/articles';
 import { TagsModule } from '@/features/tags';
 import { ArticleTagsModule } from '@/features/article-tags';
 import { CategoriesModule } from '@/features/categories';
+import { AuthModule } from '@/features/auth';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { CategoriesModule } from '@/features/categories';
     TagsModule,
     ArticleTagsModule,
     CategoriesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
