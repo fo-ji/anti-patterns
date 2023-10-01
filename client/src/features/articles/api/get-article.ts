@@ -1,9 +1,11 @@
-import { apiClient } from '@/lib/api-client';
+import { client } from '@/lib/http/client';
 
 import type { ArticleWithRelations } from '../types';
 
 export const getArticle = (
   articleId: string,
 ): Promise<ArticleWithRelations> => {
-  return apiClient.get(`/articles/${articleId}`);
+  return client<ArticleWithRelations>(`/api/proxy/articles/${articleId}`, {
+    cache: 'no-cache',
+  });
 };
