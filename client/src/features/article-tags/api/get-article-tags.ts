@@ -1,9 +1,9 @@
-import { apiClient } from '@/lib/api-client';
+import { client } from '@/lib/http/client';
 
 import type { ArticleTagWithRelations } from '../types';
 
 export const getArticleTags = (
   tagId: string,
 ): Promise<ArticleTagWithRelations[]> => {
-  return apiClient.get(`/article-tags/${tagId}`);
+  return client<ArticleTagWithRelations[]>(`/api/proxy/article-tags/${tagId}`);
 };
