@@ -10,7 +10,7 @@ export type TagInfoProps = {
 export const TagInfo = ({ tag, relatedArticleSize }: TagInfoProps) => {
   if (!tag) return <NoData />;
   return (
-    <div className="rounded-md border-neutral bg-plain p-4">
+    <div className="rounded-md border-basic bg-white p-4">
       <h1 className="text-center"># {tag.name}</h1>
       <p className="text-right">{relatedArticleSize} 投稿</p>
     </div>

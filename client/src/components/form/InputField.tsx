@@ -20,7 +20,7 @@ export const InputField = ({
     <FieldWrapper label={label} error={error}>
       <input
         type={type}
-        className="block w-full appearance-none rounded-md border border-neutral px-3 py-2 shadow-sm placeholder:text-font-light focus:border-secondary focus:outline-none focus:ring-secondary sm:text-sm"
+        className="block w-full appearance-none rounded-md border border-basic px-3 py-2 shadow-sm placeholder:text-font-light focus:border-basic-dark focus:outline-none focus:ring-basic-dark"
         {...registration}
       />
     </FieldWrapper>

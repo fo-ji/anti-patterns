@@ -14,7 +14,7 @@ export type HeaderProps = {
 
 export const Header = ({ isLoggedIn }: HeaderProps) => {
   return (
-    <header className="flex h-14 items-center justify-between bg-plain px-8 py-2">
+    <header className="flex h-14 items-center justify-between bg-white px-8 py-2">
       <NextLink href="/" className="inline-block">
         <Image
           src="/logo.png"
