@@ -20,7 +20,7 @@ export const AuthorInfo = ({ article }: AuthorInfoProps) => {
     <aside className="block min-h-[calc(100vh_-_156px)] w-1/4">
       <dl
         role="list"
-        className="max-w-md divide-y divide-neutral rounded-md bg-plain p-4 text-sm"
+        className="max-w-md divide-y divide-basic rounded-md bg-white p-4"
       >
         <div className="flex flex-col pb-3">
           <dt className="mb-1 flex items-center gap-2">

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 const variants = {
-  solid: 'bg-plain',
+  solid: 'bg-white',
   outline: 'border',
 };
 
@@ -13,7 +13,7 @@ export type CardProps = {
 export const Card = ({ variant = 'solid', children }: CardProps) => {
   return (
     <div
-      className={`rounded-lg px-6 py-4 ring-font-light hover:cursor-pointer hover:opacity-70 hover:ring-1 ${variants[variant]}`}
+      className={`rounded-lg px-6 py-4 ring-basic-light hover:cursor-pointer hover:ring-basic-dark hover:ring-4 ${variants[variant]}`}
     >
       {children}
     </div>

@@ -14,7 +14,7 @@ export type FieldWrapperPassThroughProps = Omit<FieldWrapperProps, 'children'>;
 export const FieldWrapper = ({ label, error, children }: FieldWrapperProps) => {
   return (
     <div>
-      <label className="block text-sm font-medium">
+      <label className="block font-medium">
         {label}
         <div className="mt-1">{children}</div>
       </label>
@@ -22,7 +22,7 @@ export const FieldWrapper = ({ label, error, children }: FieldWrapperProps) => {
         <div
           role="alert"
           aria-label={error.message}
-          className="text-sm font-semibold text-font-warning"
+          className="font-semibold text-system-error"
         >
           {error.message}
         </div>

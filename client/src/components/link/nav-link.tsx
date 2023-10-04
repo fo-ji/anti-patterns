@@ -19,8 +19,8 @@ export const NavLink = ({
       aria-current={isCurrent && 'page'}
       className={
         isCurrent
-          ? 'font-semibold underline decoration-primary decoration-2 underline-offset-4'
-          : 'hover:underline hover:opacity-70'
+          ? 'decoration-accent font-semibold underline decoration-2 underline-offset-4'
+          : 'hover:underline hover:font-semibold underline-offset-4'
       }
     >
       {children}

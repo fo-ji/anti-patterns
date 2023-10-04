@@ -3,10 +3,10 @@ import type { ReactNode } from 'react';
 import NextLink from 'next/link';
 
 const variants = {
-  link: 'text-font-link hover:opacity-70 hover:underline',
-  solid: 'bg-primary hover:opacity-70 text-font-white',
+  link: 'text-font-link hover:underline',
+  solid: 'bg-main hover:bg-main-dark active:bg-main-light text-white',
   outline:
-    'bg-transparent hover:bg-primary text-primary hover:text-font-white border border-primary hover:border-transparent',
+    'bg-white hover:bg-main text-main hover:text-white border border-main hover:border-transparent',
 };
 
 export type LinkProps = {
