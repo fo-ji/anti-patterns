@@ -7,13 +7,13 @@ import { server } from '@/lib/http/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: { id: string } }
 ) {
   // const session = await getServerSession(options);
   return await server(`/articles/${params.id}`, {
     // headers: {
     // Authorization: `Bearer ${session?.encodedToken}`,
     // },
-    cache: 'no-cache',
+    cache: 'no-store',
   });
 }

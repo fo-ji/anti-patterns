@@ -2,7 +2,7 @@ import { CLIENT_API_URL } from '@/config/constants';
 
 export const client = async <T>(
   url: RequestInfo,
-  options?: RequestInit,
+  options?: RequestInit
 ): Promise<T> => {
   try {
     const res = await fetch(`${CLIENT_API_URL}${url}`, {

@@ -9,7 +9,7 @@ export const getArticles = (categoryId?: string): Promise<Article[]> => {
   categoryId && params.append('categoryId', categoryId);
 
   return client<Article[]>(`/api/proxy/articles?${params}`, {
-    cache: 'no-cache',
+    cache: 'no-store',
     // headers: {
     //   Cookie: cookies()
     //     .getAll()
