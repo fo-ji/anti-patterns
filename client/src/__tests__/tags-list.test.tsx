@@ -10,7 +10,7 @@ describe('Tags List', () => {
 
     expect(list).toBeInTheDocument();
     expect(within(list as HTMLElement).getAllByRole('listitem')).toHaveLength(
-      2,
+      2
     );
   });
 });

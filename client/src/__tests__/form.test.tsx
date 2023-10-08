@@ -31,7 +31,7 @@ test('should render and submit a basic Form component', async () => {
           <Button type="submit">Submit</Button>
         </>
       )}
-    </Form>,
+    </Form>
   );
 
   await userEvent.type(screen.getByLabelText(/title/i), testData.title);
@@ -39,7 +39,7 @@ test('should render and submit a basic Form component', async () => {
   await userEvent.click(screen.getByRole('button', { name: /submit/i }));
 
   await waitFor(() =>
-    expect(handleSubmit).toHaveBeenCalledWith(testData, expect.anything()),
+    expect(handleSubmit).toHaveBeenCalledWith(testData, expect.anything())
   );
 });
 
@@ -62,7 +62,7 @@ test('should fail submission if validation fails', async () => {
           <Button type="submit">Submit</Button>
         </>
       )}
-    </Form>,
+    </Form>
   );
 
   await userEvent.click(screen.getByRole('button', { name: /submit/i }));

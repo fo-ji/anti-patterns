@@ -13,6 +13,6 @@ export async function GET(request: NextRequest) {
     // headers: {
     // Authorization: `Bearer ${session?.encodedToken}`,
     // },
-    cache: 'no-cache',
+    cache: 'no-store',
   });
 }

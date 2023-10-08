@@ -7,6 +7,6 @@ export const getTags = (take = 10): Promise<Tag[]> => {
   params.append('take', take.toString());
 
   return client<Tag[]>(`/api/proxy/tags?${params}`, {
-    cache: 'no-cache',
+    cache: 'no-store',
   });
 };

@@ -4,7 +4,7 @@ import { SERVER_API_URL } from '@/config/constants';
 
 export const server = async (
   url: RequestInfo,
-  options?: RequestInit,
+  options?: RequestInit
 ): Promise<NextResponse> => {
   console.log({ options });
   try {

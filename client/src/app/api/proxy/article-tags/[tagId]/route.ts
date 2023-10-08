@@ -7,13 +7,13 @@ import { server } from '@/lib/http/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { tagId: string } },
+  { params }: { params: { tagId: string } }
 ) {
   // const session = await getServerSession(options);
   return await server(`/article-tags/${params.tagId}`, {
     // headers: {
     // Authorization: `Bearer ${session?.encodedToken}`,
     // },
-    cache: 'no-cache',
+    cache: 'no-store',
   });
 }
