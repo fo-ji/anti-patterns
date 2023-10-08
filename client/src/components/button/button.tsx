@@ -6,6 +6,7 @@ const variants = {
     'bg-white hover:bg-main text-main hover:text-white border border-main hover:border-transparent',
   circle:
     'bg-white hover:bg-accent text-accent hover:text-white rounded-full border border-accent',
+  underline: 'text-font-link hover:underline',
 };
 
 export type ButtonProps = {
