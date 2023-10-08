@@ -13,7 +13,7 @@ export type CardProps = {
 export const Card = ({ variant = 'solid', children }: CardProps) => {
   return (
     <div
-      className={`rounded-lg px-6 py-4 ring-basic-light hover:cursor-pointer hover:ring-basic-dark hover:ring-4 ${variants[variant]}`}
+      className={`rounded-lg px-6 py-4 ring-basic-light hover:cursor-pointer hover:ring-4 hover:ring-basic-dark ${variants[variant]}`}
     >
       {children}
     </div>
