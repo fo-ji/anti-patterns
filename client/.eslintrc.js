@@ -17,13 +17,13 @@ module.exports = {
     tailwindcss: {
       groupByResponsive: true,
       whitelist: [
-        'basic\\',
+        /^basic/,
         'basic\\-(dark|light)',
-        'main\\',
+        /^main/,
         'main\\-(dark|light)',
-        'accent\\',
+        /^accent/,
         'accent\\-(dark|light)',
-        'font\\',
+        /^font/,
         'font\\-(dark|light|link)',
         'system\\-(success|warning|error)',
       ],

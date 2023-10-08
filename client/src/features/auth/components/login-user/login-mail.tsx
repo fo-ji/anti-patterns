@@ -22,7 +22,7 @@ const schema = z.object({
     .max(32, { message: '32文字以内で入力してください' })
     .regex(
       /((?=.*\d)|(?=.*\W+))(?![.\s\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
-      '英数字（大・小文字）を含めて入力してください',
+      '英数字（大・小文字）を含めて入力してください'
     ),
 });
 
@@ -50,12 +50,14 @@ export const LoginMail = () => {
           <InputField
             type="email"
             label="メールアドレス"
+            placeholder="user@example.com"
             error={formState.errors.email}
             registration={register('email')}
           />
           <InputField
             type="password"
             label="パスワード"
+            placeholder="Test12345!"
             error={formState.errors.password}
             registration={register('password')}
           />
