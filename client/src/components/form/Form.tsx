@@ -20,7 +20,7 @@ export const Form = <
     unknown,
     ZodTypeDef,
     unknown
-  >
+  >,
 >({
   children,
   onSubmit,

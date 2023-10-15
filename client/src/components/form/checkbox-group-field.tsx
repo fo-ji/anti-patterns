@@ -28,7 +28,7 @@ export const CheckboxGroupField = ({
       {options.map((option) => (
         <label
           key={option.value}
-          className="hover:bg-basic flex items-center gap-2 rounded-full px-2 py-1 hover:cursor-pointer"
+          className="flex items-center gap-2 rounded-full px-2 py-1 hover:cursor-pointer hover:bg-basic"
         >
           <input
             type="checkbox"
