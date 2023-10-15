@@ -10,7 +10,7 @@ describe('Articles List', () => {
 
     expect(list).toBeInTheDocument();
     expect(within(list as HTMLElement).getAllByRole('listitem')).toHaveLength(
-      1
+      1,
     );
   });
 
