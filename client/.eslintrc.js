@@ -17,19 +17,17 @@ module.exports = {
     tailwindcss: {
       groupByResponsive: true,
       whitelist: [
-        /^basic/,
-        'basic\\-(dark|light)',
-        /^main/,
-        'main\\-(dark|light)',
-        /^accent/,
-        'accent\\-(dark|light)',
-        /^font/,
+        '(basic|main|accent)\\-(dark|light)',
         'font\\-(dark|light|link)',
         'system\\-(success|warning|error)',
+        'border\\-(t|b|r|l)\\-(basic|main|accent)\\-(dark|light)',
+        'border\\-(basic|main|accent)',
+        'ring\\-(basic|main|accent)\\-(dark|light)',
       ],
     },
   },
   rules: {
+    'tailwindcss/classnames-order': 'off', // FIXME: カスタムクラスを利用するとき自動整形とコマンドラインでのfixとの差分が生まれる
     'no-restricted-imports': [
       'error',
       {
