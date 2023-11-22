@@ -1,6 +1,7 @@
 import { PrismaService } from '@/lib/prisma';
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import type { Article } from '@prisma/client';
+import { CreateArticleDto } from '../dtos';
 
 @Injectable()
 export class ArticlesService {
@@ -27,6 +28,13 @@ export class ArticlesService {
         favorites: true,
         articleTags: true,
       },
+    });
+  }
+
+  async createArticle(dto: CreateArticleDto): Promise<Article> {
+    if (!dto.userId) throw new UnauthorizedException('User not found');
+    return await this.prismaService.article.create({
+      data: dto,
     });
   }
 }

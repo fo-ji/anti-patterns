@@ -4,20 +4,17 @@ import { SERVER_API_URL } from '@/config/constants';
 
 export const server = async (
   url: RequestInfo,
-  options?: RequestInit
+  options?: RequestInit,
 ): Promise<NextResponse> => {
-  console.log({ options });
   try {
-    const res = await fetch(`${SERVER_API_URL}${url}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        // 'API-Key': process.env.DATA_API_KEY,
-        ...options?.headers,
-      },
-      ...options,
-    });
+    const res = await fetch(`${SERVER_API_URL}${url}`, options);
 
-    if (!res.ok) throw new Error(res.statusText);
+    if (!res.ok) {
+      return NextResponse.json(
+        { error: res.statusText },
+        { status: res.status },
+      );
+    }
 
     const data = await res.json();
     return NextResponse.json({ data });
